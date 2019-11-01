@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/Test-React-Github-Pages/static/js/main.1c8cd122.chunk.js",
-    "main.js.map": "/Test-React-Github-Pages/static/js/main.1c8cd122.chunk.js.map",
-    "runtime-main.js": "/Test-React-Github-Pages/static/js/runtime-main.4b1e9419.js",
-    "runtime-main.js.map": "/Test-React-Github-Pages/static/js/runtime-main.4b1e9419.js.map",
-    "static/js/2.34a6dad1.chunk.js": "/Test-React-Github-Pages/static/js/2.34a6dad1.chunk.js",
-    "static/js/2.34a6dad1.chunk.js.map": "/Test-React-Github-Pages/static/js/2.34a6dad1.chunk.js.map",
-    "index.html": "/Test-React-Github-Pages/index.html",
-    "precache-manifest.9fde086a979262d3bf6f93e7279f62d7.js": "/Test-React-Github-Pages/precache-manifest.9fde086a979262d3bf6f93e7279f62d7.js",
-    "service-worker.js": "/Test-React-Github-Pages/service-worker.js"
+    "main.js": "/static/js/main.3e9f829f.chunk.js",
+    "main.js.map": "/static/js/main.3e9f829f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7cb9914e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7cb9914e.js.map",
+    "static/js/2.34a6dad1.chunk.js": "/static/js/2.34a6dad1.chunk.js",
+    "static/js/2.34a6dad1.chunk.js.map": "/static/js/2.34a6dad1.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f86f0f6e28e43db5d141bdffd84cfdb0.js": "/precache-manifest.f86f0f6e28e43db5d141bdffd84cfdb0.js",
+    "service-worker.js": "/service-worker.js"
   },
   "entrypoints": [
-    "static/js/runtime-main.4b1e9419.js",
+    "static/js/runtime-main.7cb9914e.js",
     "static/js/2.34a6dad1.chunk.js",
-    "static/js/main.1c8cd122.chunk.js"
+    "static/js/main.3e9f829f.chunk.js"
   ]
 }

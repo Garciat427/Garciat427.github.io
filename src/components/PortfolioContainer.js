@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import NavTabs from "./NavTabs";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Blog from "./pages/Blog";
-import Contact from "./pages/Contact";
+import Header from "./pages/Header";
+import AboutMe from "./pages/AboutMe";
+import Paralax2 from "./pages/Paralax2";
 
 class PortfolioContainer extends Component {
   state = {
@@ -17,12 +15,9 @@ class PortfolioContainer extends Component {
   render() {
     return (
       <div>
-        <NavTabs
-          currentPage={this.state.currentPage}
-          handlePageChange={this.handlePageChange}
-        />
-        Based on `this.state.currentPage`, render the appropriate component
-        here.
+        <Header />
+        <AboutMe />
+        <Paralax2 />
       </div>
     );
   }
