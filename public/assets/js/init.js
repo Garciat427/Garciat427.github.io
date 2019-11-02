@@ -3,6 +3,7 @@
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();
+    $('.materialboxed').materialbox();
     AOS.init();
 
     

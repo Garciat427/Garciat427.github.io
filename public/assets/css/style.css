@@ -70,7 +70,11 @@
         font-family: 'Open Sans', sans-serif;
     }
 
-    .techIcon{
-        font-size: 50px !important;
+    .techIcon {
+        font-size: 3vh !important;
         margin: 10px;
+    }
+
+    .chevron-icon {
+        font-size: 3vh !important;
     }
