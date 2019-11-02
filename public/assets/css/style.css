@@ -69,12 +69,37 @@
         font-weight: bold;
         font-family: 'Open Sans', sans-serif;
     }
+    .subtitle-Project {
+        font-size: 15px;
+    }
 
     .techIcon {
-        font-size: 3vh !important;
-        margin: 10px;
+        font-size: 5vh !important;
+        margin: 20px;
     }
 
     .chevron-icon {
         font-size: 3vh !important;
+        transition: font-size 0.1s;
+    }
+    .chevron-icon:hover {
+        font-size: 4vh !important;
+    }
+    
+    .tab {
+        margin-left: 40px;
+    }
+
+    .tab-small {
+        margin-left: 15px;
+    }
+
+    .projectLink {
+        margin-right: 2vh;
+        font-size: 40px;
+        transition: font-size 0.1s;
+    }
+    .projectLink:hover {
+        font-size: 45px;
+        transform: blue;
     }

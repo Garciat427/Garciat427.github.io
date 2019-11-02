@@ -7,7 +7,7 @@ function Header() {
       <div className="section no-pad">
         <div className="container upperHeader">
 
-          <div className="row reset-marg-pad site siteTitle">
+          <div className="row reset-marg-pad site ">
             <div className="col s12 m12">
               <h1 className="reset-marg-pad header grey-text text-darken-4" data-aos="fade-right"
                 data-aos-duration="1000" data-aos-delay="200" id="logo">Troy Garcia</h1>
