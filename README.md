@@ -7,7 +7,7 @@
 
 <p align="center">
   
-  <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
+  <a href="https://app.netlify.com/sites/garciat427/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/17923dc8-a89c-4305-afe2-a1acaadee1ce/deploy-status" alt="Netlify Status" />
   </a>
 </p>
