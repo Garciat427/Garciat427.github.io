@@ -94,12 +94,12 @@ function ProjectSpotlight() {
             {/* Description Card */}
             <div className="col s12 m4">
                <div className="card hoverable">
-                  <div className="card-content Black-text">
+                  <div className="card-content">
 
                      <div className="row">
                         <div className="col s12 m12">
-                           <span className="card-title">Travel-Ten <br></br>
-                              <span className="subtitle-Project">
+                           <span className="card-title blue-grey-text text-darken-4">Travel-Ten <br></br>
+                              <span className="subtitle-Project blue-grey-text">
                                  A Travel Site for the top 10 eats, sleeps, and visits
                               </span>
                            </span>
@@ -108,25 +108,19 @@ function ProjectSpotlight() {
 
                      <div className="row">
                         <div className="col s12 m12 center">
-                           <span className="">
-                              <i className="fab fa-html5 techIcon"></i>
-                              <i className="fab fa-css3-alt techIcon"></i>
-                              <i className="fab fa-js techIcon"></i>
+                           <span className="blue-grey-text text-lighten-4">
+                              <i className="techIcon tooltipped hover-Color fab fa-html5" 
+                              data-position="bottom" data-tooltip="HTML5"></i>
+                              <i className="techIcon tooltipped hover-Color fab fa-css3-alt" 
+                              data-position="bottom" data-tooltip="CSS3"></i>
+                              <i className="techIcon tooltipped hover-Color fab fa-js"
+                              data-position="bottom" data-tooltip="JS/JQuery"></i>
+                              <i className="techIcon tooltipped hover-Color fas fa-exchange-alt" 
+                              data-position="bottom" data-tooltip="AJAX"></i>
                            </span>
                         </div>
                      </div>
-                     <div className="row">
-                        <div className="col s12 m12 center">
-                           <p>
-                              <span>HTML5</span>
-                              <span className="tab-small">CSS3</span>
-                              <span className="tab-small">JS/JQuery</span>
-                              <span className="tab-small">AJAX</span>
-
-
-                           </p>
-                        </div>
-                     </div>
+                     
 
                   </div>
                </div>
