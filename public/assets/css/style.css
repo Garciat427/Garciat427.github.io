@@ -125,9 +125,17 @@
     .link-Action-Btn {
         transition: color 0.1s;
     }
-    
+
     .link-Action-Btn:hover {
         color: #b0bec5!important;
+    }
+
+    .hover-Color {
+        transition: color 0.1s;
+    }
+    
+    .hover-Color:hover {
+        color: #37474f!important;
     }
 
 

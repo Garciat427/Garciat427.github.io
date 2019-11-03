@@ -68,11 +68,18 @@ function ProjectSpotlight() {
 
                      <div className="row">
                         <div className="col s12 m12 center">
-                           <span className="blue-grey-text text-darken-4">
-                              <i className="fas fa-database techIcon"></i>
-                              <i className="fas fa-server techIcon"></i>
-                              <i className="fab fa-react techIcon"></i>
-                              <i className="fab fa-node techIcon"></i>
+                           <span className="blue-grey-text text-darken-1">
+                              <i className="fas fa-database techIcon tooltipped hover-Color" data-position="bottom"
+                              data-tooltip="MySQL"></i>
+
+                              <i className="fas fa-server techIcon tooltipped hover-Color" data-position="bottom"
+                              data-tooltip="ExpressJS"></i>
+
+                              <i className="fab fa-react techIcon tooltipped hover-Color" data-position="bottom"
+                              data-tooltip="ReactJS"></i>
+
+                              <i className="fab fa-node techIcon tooltipped hover-Color" data-position="bottom"
+                              data-tooltip="NodeJS"></i>
                            </span>
                         </div>
                      </div>
