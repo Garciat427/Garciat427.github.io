@@ -68,7 +68,7 @@ function ProjectSpotlight() {
 
                      <div className="row">
                         <div className="col s12 m12 center">
-                           <span className="blue-grey-text text-darken-1">
+                           <span className="blue-grey-text text-lighten-4">
                               <i className="fas fa-database techIcon tooltipped hover-Color" data-position="bottom"
                               data-tooltip="MySQL"></i>
 
