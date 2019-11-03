@@ -11,7 +11,7 @@ function ProjectSpotlight() {
                {/* Project Card */}
                <div className="card hoverable">
                   <div className="card-image waves-effect waves-block waves-light">
-                     <img className="activator" src="assets/images/DipmatMed-Front-Page.png" alt="Med 2.0 Front Page"></img>
+                     <img className="activator" src="assets/images/DipmatMed-Front-Page.jpg" alt="Med 2.0 Front Page"></img>
                   </div>
 
                   <div className="card-contentchevron-icon center">
