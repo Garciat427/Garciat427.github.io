@@ -5,6 +5,7 @@
         display: flex;
         min-height: 100vh;
         flex-direction: column;
+        background-image: linear-gradient(#fdfdfd,#fafafa,#b0bec5) !important;
     }
 
     main {
@@ -80,10 +81,10 @@
 
     .chevron-icon {
         font-size: 3vh !important;
-        transition: font-size 0.1s;
+        transition: color 0.1s;
     }
     .chevron-icon:hover {
-        font-size: 4vh !important;
+        color: #b0bec5!important;
     }
     
     .tab {
@@ -97,13 +98,37 @@
     .projectLink {
         margin-right: 2vh;
         font-size: 30px;
-        transition: font-size 0.1s;
+        transition: color 0.1s;
     }
     .projectLink:hover {
-        font-size: 35px;
-        transform: blue;
+        color: #b0bec5!important;
     }
     
     .min-Margin {
+        margin-top:3px;
         margin-bottom: 3px;
     }
+    .min-Padding {
+        padding-top: 0;
+        padding-top: 0;
+    }
+    .link-Footer {
+        margin-right: 15px;
+        font-size: 30px;
+        margin-bottom: 5px;
+        transition: color 0.1s;
+    }
+    .link-Footer:hover {
+        color: #b0bec5!important;
+    }
+
+    .link-Action-Btn {
+        transition: color 0.1s;
+    }
+    
+    .link-Action-Btn:hover {
+        color: #b0bec5!important;
+    }
+
+
+    

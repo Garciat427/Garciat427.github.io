@@ -4,6 +4,7 @@
     $('.sidenav').sidenav();
     $('.parallax').parallax();
     $('.materialboxed').materialbox();
+    $('.fixed-action-btn').floatingActionButton();
     AOS.init();
 
     

@@ -15,23 +15,26 @@ function ProjectSpotlight() {
                   </div>
 
                   <div className="card-contentchevron-icon center">
-                     <span className="card-title activator grey-text text-darken-4 chevron-icon "><i className="fas fa-chevron-up"></i></span>
+                     <span className="card-title activator blue-grey-text text-darken-4 chevron-icon"><i className="fas fa-chevron-up"></i></span>
                   </div>
 
                   <div className="card-reveal">
-                     <span className="card-title grey-text text-darken-4 chevron-icon center">
+                     <span className="card-title blue-grey-text text-darken-4 chevron-icon center">
                         <i className="fas fa-chevron-down"></i>
                         <span className="card-title">Med 2.0 Symptom and Medical Trend Tracker</span>
                      </span>
-
-
-                     Med 2.0 is a medical-based application that is being developed with 2 goals in mind. <br></br>
-                     <div className="tab">
-                        1. Provide a diagnosis to the end-user based on symptoms provided.<br></br>
-                        2. Collect croud-sourced empirical data on diagnosises to allow for foresight of current conditions within an area.<br></br>
-                     </div>
-                     This data can be proven benifical, and can also assist with the allocation of resources.<br>
-                     </br> This application was completed for Project 2 and continued as Project 3 of my Bootcamp.
+                     <span className="blue-grey-text text-darken-1 ">
+                           <p className="mainContentHighlighted min-Padding min-Margin">
+                              Med 2.0 is a medical-based application that is being developed with 2 goals in mind. 
+                              <br></br>
+                           </p>
+                        <div className="tab blue-grey-text text-darken-4">
+                           1. Provide a diagnosis to the end-user based on symptoms provided.<br></br>
+                           2. Collect croud-sourced empirical data on diagnosises to allow for foresight of current conditions within an area.<br></br>
+                        </div>
+                        This data can be proven benifical, and can also assist with the allocation of resources.<br>
+                        </br> This application was completed for Project 2 and continued as Project 3 of my Bootcamp.
+                     </span>
                      <blockquote className="min-Margin">
                         <p className="min-Margin">
                            Current Status: In Development (Not Deployed)<br></br>
@@ -50,13 +53,13 @@ function ProjectSpotlight() {
 
             {/* Description Card */}
             <div className="col s12 m4">
-               <div className="card">
-                  <div className="card-content Black-text">
+               <div className="card hoverable">
+                  <div className="card-content">
 
                      <div className="row">
                         <div className="col s12 m12">
-                           <span className="card-title">Med 2.0 <br></br>
-                              <span className="subtitle-Project">
+                           <span className="card-title blue-grey-text text-darken-4">Med 2.0 <br></br>
+                              <span className="subtitle-Project blue-grey-text">
                                  Symptom and Medical Trend Tracker
                               </span>
                            </span>
@@ -65,7 +68,7 @@ function ProjectSpotlight() {
 
                      <div className="row">
                         <div className="col s12 m12 center">
-                           <span className="">
+                           <span className="blue-grey-text text-darken-4">
                               <i className="fas fa-database techIcon"></i>
                               <i className="fas fa-server techIcon"></i>
                               <i className="fab fa-react techIcon"></i>
@@ -83,7 +86,7 @@ function ProjectSpotlight() {
          <div className="row" data-aos="fade-up" data-aos-duration="800" data-aos-offset="400">
             {/* Description Card */}
             <div className="col s12 m4">
-               <div className="card">
+               <div className="card hoverable">
                   <div className="card-content Black-text">
 
                      <div className="row">
