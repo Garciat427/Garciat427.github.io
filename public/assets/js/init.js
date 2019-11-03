@@ -6,6 +6,7 @@
     $('.materialboxed').materialbox();
     $('.fixed-action-btn').floatingActionButton();
     $('.tooltipped').tooltip();
+    $('.scrollspy').scrollSpy();
     AOS.init();
 
     

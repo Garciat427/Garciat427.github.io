@@ -24,11 +24,11 @@ function Footer() {
                      </a>
                      <a className="blue-grey-text text-lighten-4 right" 
                      href="https://www.linkedin.com/in/garciat427">
-                        <i class="link-Footer fab fa-linkedin"></i>
+                        <i className="link-Footer fab fa-linkedin"></i>
                      </a>
                      <a className="blue-grey-text text-lighten-4 right" 
                      href="https://github.com/Garciat427">
-                        <i class="link-Footer fab fa-github"></i>
+                        <i className="link-Footer fab fa-github"></i>
                      </a>
                      
                   </p>
