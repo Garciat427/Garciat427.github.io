@@ -15,7 +15,7 @@ function ProjectSpotlightSection() {
 
             <div className="row">
                <div className="col s12">
-                  <section data-aos="fade-up" data-aos-duration="800" data-aos-offset="400">
+                  <section>
                      <ProjectSpotlight />
                   </section>
                </div>

@@ -96,10 +96,14 @@
 
     .projectLink {
         margin-right: 2vh;
-        font-size: 40px;
+        font-size: 30px;
         transition: font-size 0.1s;
     }
     .projectLink:hover {
-        font-size: 45px;
+        font-size: 35px;
         transform: blue;
+    }
+    
+    .min-Margin {
+        margin-bottom: 3px;
     }
