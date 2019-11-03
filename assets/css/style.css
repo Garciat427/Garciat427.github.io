@@ -69,8 +69,41 @@
         font-weight: bold;
         font-family: 'Open Sans', sans-serif;
     }
+    .subtitle-Project {
+        font-size: 15px;
+    }
 
-    .techIcon{
-        font-size: 50px !important;
-        margin: 10px;
+    .techIcon {
+        font-size: 5vh !important;
+        margin: 20px;
+    }
+
+    .chevron-icon {
+        font-size: 3vh !important;
+        transition: font-size 0.1s;
+    }
+    .chevron-icon:hover {
+        font-size: 4vh !important;
+    }
+    
+    .tab {
+        margin-left: 40px;
+    }
+
+    .tab-small {
+        margin-left: 15px;
+    }
+
+    .projectLink {
+        margin-right: 2vh;
+        font-size: 30px;
+        transition: font-size 0.1s;
+    }
+    .projectLink:hover {
+        font-size: 35px;
+        transform: blue;
+    }
+    
+    .min-Margin {
+        margin-bottom: 3px;
     }
