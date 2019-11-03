@@ -58,7 +58,11 @@ function ProjectSpotlight() {
 
                      <div className="row">
                         <div className="col s12 m12">
-                           <span className="card-title blue-grey-text text-darken-4">Med 2.0 <br></br>
+                           <span className="card-title blue-grey-text text-darken-4">Med 2.0 
+                              <span className="subtitle-Project blue-grey-text text-lighten-2 right">
+                                 Featured Project
+                              </span>
+                              <br></br>
                               <span className="subtitle-Project blue-grey-text">
                                  Symptom and Medical Trend Tracker
                               </span>
@@ -68,7 +72,7 @@ function ProjectSpotlight() {
 
                      <div className="row">
                         <div className="col s12 m12 center">
-                           <span className="blue-grey-text text-lighten-4">
+                           <span className="blue-grey-text text-lighten-2">
                               <i className="fas fa-database techIcon tooltipped hover-Color" data-position="bottom"
                               data-tooltip="MySQL"></i>
 
@@ -98,7 +102,11 @@ function ProjectSpotlight() {
 
                      <div className="row">
                         <div className="col s12 m12">
-                           <span className="card-title blue-grey-text text-darken-4">Travel-Ten <br></br>
+                           <span className="card-title blue-grey-text text-darken-4">Travel-Ten 
+                              <span className="subtitle-Project blue-grey-text text-lighten-2 right">
+                                 Featured Project
+                              </span>
+                              <br></br>
                               <span className="subtitle-Project blue-grey-text">
                                  A Travel Site for the top 10 eats, sleeps, and visits
                               </span>
@@ -108,7 +116,7 @@ function ProjectSpotlight() {
 
                      <div className="row">
                         <div className="col s12 m12 center">
-                           <span className="blue-grey-text text-lighten-4">
+                           <span className="blue-grey-text text-lighten-2">
                               <i className="techIcon tooltipped hover-Color fab fa-html5" 
                               data-position="bottom" data-tooltip="HTML5"></i>
                               <i className="techIcon tooltipped hover-Color fab fa-css3-alt" 
@@ -133,23 +141,19 @@ function ProjectSpotlight() {
                   </div>
 
                   <div className="card-contentchevron-icon center">
-                     <span className="card-title activator grey-text text-darken-4 chevron-icon "><i className="fas fa-chevron-up"></i></span>
+                     <span className="card-title activator blue-grey-text text-darken-4 chevron-icon "><i className="fas fa-chevron-up"></i></span>
                   </div>
 
                   <div className="card-reveal">
-                     <span className="card-title grey-text text-darken-4 chevron-icon center">
+                     <span className="card-title blue-grey-text text-darken-4 chevron-icon center">
                         <i className="fas fa-chevron-down"></i>
                         <span className="card-title">Travel-Ten</span>
                      </span>
 
 
-                     Travel-Ten is a travel site created to find 10 places to eat, 10 places to sleep, and 10 places to visit within the city. <br></br>
-                     <div className="tab">
-                        <br></br>
-                        <br></br>
-
-                     </div>
-                     This Project was created for Project 1 as part of my Bootcamp. It explores technologies such as HTML, CSS, JS/JQuery and basic front end AJAX api requests.
+                     <p className="mainContentHighlighted min-Padding min-Margin blue-grey-text text-darken-1">Travel-Ten is a travel site created to find 10 places to eat, 10 places to sleep, and 10 places to visit within the city. </p>
+                     <p className="blue-grey-text text-darken-1">This Project was created for Project 1 as part of my Bootcamp. It explores technologies such as HTML, CSS, JS/JQuery and basic front end AJAX api requests.</p>
+                     
                      <blockquote className="min-Margin">
                         <p className="min-Margin">
                            Current Status: Deployed<br></br>

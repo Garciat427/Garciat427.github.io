@@ -8,7 +8,7 @@ function ProjectSpotlightSection() {
 
             <div className="row">
                <div className="col s12 center">
-                  <h4 data-aos="fade-right" data-aos-duration="800" data-aos-offset="100"><i className=" blue-grey-text text-lighten-1">Featured Projects</i></h4>
+                  <h4 data-aos="fade-right" data-aos-duration="800" data-aos-offset="100"><i className=" blue-grey-text text-darken-4">Featured Projects</i></h4>
                   
                </div>
             </div>
