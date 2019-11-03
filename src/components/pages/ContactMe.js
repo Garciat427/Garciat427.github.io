@@ -13,7 +13,7 @@ function ContactMe() {
                      <p className="mainContent blue-grey-text text-darken-4">Currently, I am tackling some commission based freelance work with my company FrontEndOnFront. With my various projects in progress, I'm currently not looking for any freelance opportunities. <br></br> However with that being said, if you want to talk, whether its for a project idea, job opportunities, or to just say hi, my inbox is open!</p>
                      <br></br><br></br>
                      
-                     <a className="btn waves-effect waves-light blue-grey darken-4 hoverable link-Action-Btn" href ="mailto:tg1212@outlook.com">Say Hi!
+                     <a className="btn waves-effect waves-light blue-grey darken-4 hoverable link-Action-Btn" href ="mailto:tg1212@outlook.com" target="_tab">Say Hi!
                         <i className="far fa-envelope right"></i>
                      </a>
                   </section>

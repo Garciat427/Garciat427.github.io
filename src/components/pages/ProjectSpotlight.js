@@ -43,7 +43,7 @@ function ProjectSpotlight() {
                         </p>
                      </blockquote>
                      <h5 className="right">
-                        <a href="https://github.com/Garciat427/Med-2.0" className="projectLink black-text"><i className="text-black fab fa-github projectLink"></i></a>
+                        <a href="https://github.com/Garciat427/Med-2.0" target="_tab" className="projectLink black-text"><i className="text-black fab fa-github projectLink"></i></a>
                         {/* Blocked due to not deployed <a href="https://github.com/Garciat427/Med-2.0" className="projectLink black-text"><i className="fas fa-external-link-alt projectLink"></i></a> */}
 
                      </h5>
@@ -162,8 +162,8 @@ function ProjectSpotlight() {
                         </p>
                      </blockquote>
                      <h5 className="right">
-                        <a href="https://github.com/Garciat427/Travel-Ten" className="projectLink black-text"><i className="text-black fab fa-github projectLink"></i></a>
-                        <a href="https://garciat427.github.io/Travel-Ten/" className="projectLink black-text"><i className="fas fa-external-link-alt projectLink"></i></a>
+                        <a href="https://github.com/Garciat427/Travel-Ten" target="_tab" className="projectLink black-text"><i className="text-black fab fa-github projectLink"></i></a>
+                        <a href="https://garciat427.github.io/Travel-Ten/" target="_tab" className="projectLink black-text"><i className="fas fa-external-link-alt projectLink"></i></a>
 
                      </h5>
                   </div>

@@ -8,31 +8,31 @@ function FloatingActionBtn() {
          </button>
          <ul>
             <li>
-               <a href="https://github.com/Garciat427" 
+               <a href="https://github.com/Garciat427 " target="_tab"
                className="btn-floating blue-grey darken-3 hoverable">
                   <i className="fab fa-github link-Action-Btn"></i>
                </a>
             </li>
             <li>
-               <a href="https://www.linkedin.com/in/garciat427" 
+               <a href="https://www.linkedin.com/in/garciat427" target="_tab"
                className="btn-floating blue-grey darken-3 hoverable">
                   <i className="fab fa-linkedin-in link-Action-Btn"></i>
                </a>
             </li>
             <li>
-               <a href="mailto:tg1212@outlook.com" 
+               <a href="mailto:tg1212@outlook.com" target="_tab"
                className="btn-floating blue-grey darken-3 hoverable">
                   <i className="fas fa-envelope link-Action-Btn"></i>
                </a>
             </li>
             <li>
-               <a href="https://twitter.com/Garciat427" 
+               <a href="https://twitter.com/Garciat427" target="_tab"
                className="btn-floating blue-grey darken-3 hoverable">
                   <i className="fab fa-twitter link-Action-Btn"></i>
                </a>
             </li>
             <li>
-               <a href="https://www.instagram.com/garciat427/" 
+               <a href="https://www.instagram.com/garciat427/" target="_tab"
                className="btn-floating blue-grey darken-3 hoverable">
                   <i className="fab fa-instagram link-Action-Btn"></i>
                </a>
