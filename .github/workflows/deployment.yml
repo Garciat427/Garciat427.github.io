@@ -1,0 +1,42 @@
+name: Deployment Status
+
+on:
+  push:
+    branches: [ main, portfolio_v2 ]
+
+jobs:
+  heroku-health-check:
+    name: Heroku Deployment Health Check
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/portfolio_v2' || github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Check Heroku App Status
+        run: |
+          echo "Checking Heroku deployment health..."
+          curl -sSf https://troygarcia-portfolio-2e659a1fb5c0.herokuapp.com/ > /dev/null
+          echo "✅ Heroku app is responding successfully"
+          
+      - name: Performance Check
+        run: |
+          echo "Running basic performance check..."
+          response_time=$(curl -o /dev/null -s -w '%{time_total}' https://troygarcia-portfolio-2e659a1fb5c0.herokuapp.com/)
+          echo "Response time: ${response_time}s"
+          if (( $(echo "$response_time < 3.0" | bc -l) )); then
+            echo "✅ Performance check passed (< 3s)"
+          else
+            echo "⚠️ Performance check warning (> 3s)"
+          fi
+
+  notify-success:
+    name: Deployment Success Notification
+    runs-on: ubuntu-latest
+    needs: heroku-health-check
+    if: success()
+    
+    steps:
+      - name: Success notification
+        run: |
+          echo "🎉 Portfolio deployment verified successfully!"
+          echo "🌐 Live at: https://troygarcia-portfolio-2e659a1fb5c0.herokuapp.com/"
+          echo "📊 All health checks passed" 
