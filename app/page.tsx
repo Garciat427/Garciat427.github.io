@@ -223,7 +223,7 @@ export default function Portfolio() {
       </section>
 
       {/* FrontEndonFront Consulting Section */}
-      <section id="consulting" className="py-20 px-6 bg-gray-900">
+      <section id="consulting" className="py-20 px-6 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="flex flex-col items-center mb-8">
