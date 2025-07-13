@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline - Netlify
 
 on:
   push:
@@ -77,7 +77,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
         
-      - name: Build application
+      - name: Build application for Netlify
         run: npm run build
         
       - name: Start application
@@ -91,4 +91,7 @@ jobs:
           npm install -g @lhci/cli
           lhci autorun
         env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }} 
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  # Note: Actual deployment to Netlify happens automatically via Netlify's GitHub integration
+  # when changes are pushed to the main branch or portfolio_v2 branch 

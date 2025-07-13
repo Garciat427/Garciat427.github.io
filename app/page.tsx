@@ -56,6 +56,14 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-paper-light">
+      {/* Skip to main content link for accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-blue-600 text-white px-4 py-2 rounded"
+      >
+        Skip to main content
+      </a>
+      
       <ImagePreviewModal
         isOpen={imagePreview.isOpen}
         images={imagePreview.images}
@@ -66,9 +74,11 @@ export default function Portfolio() {
       />
 
       <Navigation scrollToSection={scrollToSection} />
-      <HeroSection scrollToSection={scrollToSection} />
-      <AboutSection />
-      <ProjectsSection openImagePreview={openImagePreview} />
+      
+      <main id="main-content">
+        <HeroSection scrollToSection={scrollToSection} />
+        <AboutSection />
+        <ProjectsSection openImagePreview={openImagePreview} />
 
       {/* Work Experience Section */}
       <section id="experience" className="py-20 px-6 section-dark bg-grid-pattern-fine texture-overlay">
@@ -230,7 +240,7 @@ export default function Portfolio() {
               <div className="mb-4">
                 <Image
                   src="/logo.svg"
-                  alt="FrontEndonFront Logo"
+                  alt="FrontEndonFront - Professional web development consulting services logo"
                   width={80}
                   height={80}
                   className="mx-auto shadow-lg rounded-2xl"
@@ -256,19 +266,19 @@ export default function Portfolio() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-              <div className="flex items-center justify-center gap-2 text-green-400">
+              <div className="flex items-center justify-center gap-2 text-green-300">
                 <span>✓</span>
                 <span className="text-sm">Free consultation</span>
               </div>
-              <div className="flex items-center justify-center gap-2 text-green-400">
+              <div className="flex items-center justify-center gap-2 text-green-300">
                 <span>✓</span>
                 <span className="text-sm">5+ years experience</span>
               </div>
-              <div className="flex items-center justify-center gap-2 text-green-400">
+              <div className="flex items-center justify-center gap-2 text-green-300">
                 <span>✓</span>
                 <span className="text-sm">North America wide</span>
               </div>
-              <div className="flex items-center justify-center gap-2 text-green-400">
+              <div className="flex items-center justify-center gap-2 text-green-300">
                 <span>✓</span>
                 <span className="text-sm">Rapid delivery</span>
               </div>
@@ -295,9 +305,9 @@ export default function Portfolio() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="p-6 bg-gray-800 border-gray-700 text-center hover:bg-gray-750 transition-all duration-300 group hover:scale-105 cursor-pointer">
+            <Card className="p-6 bg-gray-800 border-gray-700 text-center hover:bg-gray-750 transition-all duration-300 group hover:scale-105 cursor-pointer" role="article" tabIndex={0}>
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Code className="h-6 w-6 text-white" />
+                <Code className="h-6 w-6 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                 Full-Stack Development
@@ -308,9 +318,9 @@ export default function Portfolio() {
               </p>
             </Card>
 
-            <Card className="p-6 bg-gray-800 border-gray-700 text-center hover:bg-gray-750 transition-all duration-300 group hover:scale-105 cursor-pointer">
+            <Card className="p-6 bg-gray-800 border-gray-700 text-center hover:bg-gray-750 transition-all duration-300 group hover:scale-105 cursor-pointer" role="article" tabIndex={0}>
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Zap className="h-6 w-6 text-white" />
+                <Zap className="h-6 w-6 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                 AI Integration
@@ -321,9 +331,9 @@ export default function Portfolio() {
               </p>
             </Card>
 
-            <Card className="p-6 bg-gray-800 border-gray-700 text-center hover:bg-gray-750 transition-all duration-300 group hover:scale-105 cursor-pointer">
+            <Card className="p-6 bg-gray-800 border-gray-700 text-center hover:bg-gray-750 transition-all duration-300 group hover:scale-105 cursor-pointer" role="article" tabIndex={0}>
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Server className="h-6 w-6 text-white" />
+                <Server className="h-6 w-6 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                 SaaS Solutions
@@ -341,13 +351,13 @@ export default function Portfolio() {
                 <a href="https://frontendonfront.com" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="/logo.svg"
-                    alt="FrontEndonFront Logo"
+                    alt="FrontEndonFront consulting services"
                     width={20}
                     height={20}
                     className="mr-2"
                   />
                   Visit FrontEndonFront
-                  <ExternalLink className="ml-2 h-5 w-5" />
+                  <ExternalLink className="ml-2 h-5 w-5" aria-hidden="true" />
                 </a>
               </Button>
             </div>
@@ -375,8 +385,8 @@ export default function Portfolio() {
               className="bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-700 hover:to-green-800 text-white px-16 py-6 text-xl font-semibold w-full sm:w-auto group transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-w-[280px]"
               asChild
             >
-              <a href="https://cdn.frontendonfront.com/TroyGarcia-Resume-Online.pdf" target="_blank" rel="noopener noreferrer">
-                <Download className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+              <a href="https://cdn.frontendonfront.com/TroyGarcia-Resume-Online.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download Troy Garcia's resume (PDF)">
+                <Download className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
                 Download Resume
               </a>
             </Button>
@@ -390,8 +400,9 @@ export default function Portfolio() {
                 href="https://www.linkedin.com/in/garciat427/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="View Troy Garcia's LinkedIn profile"
               >
-                <Linkedin className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+                <Linkedin className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
                 View LinkedIn Profile
               </a>
             </Button>
@@ -405,6 +416,7 @@ export default function Portfolio() {
           <p className="text-gray-600 text-sm">&copy; {new Date().getFullYear()} Troy Garcia. All rights reserved.</p>
         </div>
       </footer>
+      </main>
     </div>
   )
 } 

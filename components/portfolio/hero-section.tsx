@@ -43,7 +43,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
     <section className="pt-32 pb-20 px-6 hero-gradient bg-grid-pattern texture-overlay">
       <div className="container mx-auto text-center max-w-4xl">
         <div className="flex items-center justify-center gap-2 mb-8">
-          <Star className="h-4 w-4 text-yellow-500 fill-current" />
+          <Star className="h-4 w-4 text-yellow-500 fill-current" aria-hidden="true" />
           <span className="text-sm text-gray-600">Trusted by startups and enterprises worldwide</span>
         </div>
 
@@ -88,6 +88,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
             size="lg"
             onClick={() => scrollToSection("projects")}
             className="bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-700 hover:to-green-800 text-white px-8 py-3 text-lg"
+            aria-label="Navigate to projects section"
           >
             View My Work
           </Button>
@@ -95,9 +96,12 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
             size="lg"
             variant="outline"
             className="border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-50 px-8 py-3 text-lg bg-transparent"
+            asChild
           >
-            <Download className="mr-2 h-5 w-5" />
-            Download Resume
+            <a href="https://cdn.frontendonfront.com/TroyGarcia-Resume-Online.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download Troy Garcia's resume (PDF)">
+              <Download className="mr-2 h-5 w-5" aria-hidden="true" />
+              Download Resume
+            </a>
           </Button>
         </div>
       </div>
