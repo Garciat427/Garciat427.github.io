@@ -1,6 +1,7 @@
 "use client"
 
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
+import Image from "next/image"
 
 interface ImagePreviewModalProps {
   isOpen: boolean
@@ -42,9 +43,11 @@ export function ImagePreviewModal({ isOpen, images, currentIndex, onClose, onNex
         )}
 
         <div className="flex items-center justify-center w-full h-full px-16 py-16">
-          <img
+          <Image
             src={images[currentIndex] || "/placeholder.svg"}
             alt={`Preview ${currentIndex + 1}`}
+            width={800}
+            height={600}
             className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
           />
         </div>

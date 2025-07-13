@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog"
 import { Github, ExternalLink, ZoomIn } from "lucide-react"
 import { currentProjects, pastProjects, type Project } from "@/lib/data/projects"
+import Image from "next/image"
 
 interface ProjectsSectionProps {
   openImagePreview: (images: string[], startIndex?: number) => void
@@ -106,9 +107,11 @@ export function ProjectsSection({ openImagePreview }: ProjectsSectionProps) {
                         className="relative group cursor-pointer"
                         onClick={() => openImagePreview(project.images, index)}
                       >
-                        <img
+                        <Image
                           src={image || "/placeholder.svg"}
                           alt={`${project.title} Screenshot ${index + 1}`}
+                          width={400}
+                          height={300}
                           className="w-full rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 group-hover:scale-[1.02]"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-200 rounded-lg flex items-center justify-center">

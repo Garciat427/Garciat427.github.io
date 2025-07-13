@@ -48,7 +48,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
-          Hi, I'm{" "}
+          Hi, I&apos;m{" "}
           <span className="bg-gradient-to-r from-emerald-600 to-green-700 bg-clip-text text-transparent">
             Troy Garcia
           </span>
