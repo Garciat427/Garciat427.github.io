@@ -1,7 +1,9 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "troy-garcia-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "description": "Professional portfolio website for Troy Garcia - Full Stack Developer",
+  "author": "Troy Garcia",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
