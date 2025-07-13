@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Softwa
 
 ## 🚀 Live Website
 
-Visit the portfolio at: [garciat427.github.io](https://garciat427.github.io)
+Visit the portfolio at: [portfolio.frontendonfront.com](https://portfolio.frontendonfront.com)
 
 ## 📋 About
 
@@ -141,7 +141,7 @@ src/
 
 ## 🔗 Links
 
-- **Portfolio**: [garciat427.github.io](https://garciat427.github.io)
+- **Portfolio**: [portfolio.frontendonfront.com](https://portfolio.frontendonfront.com)
 - **LinkedIn**: [linkedin.com/in/garciat427](https://linkedin.com/in/garciat427)
 - **Consulting**: [frontendonfront.com](https://frontendonfront.com)
 - **Resume**: [Online Resume PDF](https://cdn.frontendonfront.com/TroyGarcia-Resume-Online.pdf)
