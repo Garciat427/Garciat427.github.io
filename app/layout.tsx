@@ -10,7 +10,26 @@ export const metadata: Metadata = {
   title: "Troy Garcia - Full Stack Developer",
   description:
     "Full-stack software engineer specializing in MERN stack development, AI integration, and building scalable web applications.",
-  generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+      {
+        url: '/favicon.ico',
+        sizes: '32x32',
+        type: 'image/x-icon',
+      },
+    ],
+    apple: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
