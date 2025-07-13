@@ -337,7 +337,7 @@ export default function Portfolio() {
 
           <div className="text-center">
             <div className="flex justify-center">
-              <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
+              <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white px-16 py-6 text-xl font-semibold min-w-[280px]">
                 <a href="https://frontendonfront.com" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="/logo.svg"
@@ -387,7 +387,7 @@ export default function Portfolio() {
               asChild
             >
               <a
-                href="https://www.linkedin.com/in/troy-garcia-software-developer/"
+                href="https://www.linkedin.com/in/garciat427/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
