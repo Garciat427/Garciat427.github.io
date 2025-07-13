@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Troy Garcia - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website showcasing my work as a Full Stack Software Engineer and Founder of FrontEndOnFront consulting.
 
-First, run the development server:
+## 🚀 Live Website
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Visit the portfolio at: [garciat427.github.io](https://garciat427.github.io)
+
+## 📋 About
+
+This portfolio website features:
+
+- **Professional Overview**: Full-stack developer specializing in MERN stack and AI integration
+- **Work Experience**: Timeline view of my career journey with major companies
+- **Project Showcase**: Current and personal projects with detailed case studies
+- **FrontEndOnFront Consulting**: Information about my consulting business since 2019
+- **Contact Information**: Direct links to resume, LinkedIn, and consultation booking
+
+## 🛠️ Technologies Used
+
+- **Framework**: Next.js 15.2.4
+- **Styling**: Tailwind CSS with custom gradients and animations
+- **TypeScript**: Full type safety throughout the application
+- **UI Components**: Custom components with Radix UI primitives
+- **Icons**: Lucide React icons
+- **Fonts**: Inter font family optimized with next/font
+- **Image Optimization**: Next.js Image component with CDN integration
+- **Deployment**: GitHub Pages
+
+## ✨ Features
+
+### 🎨 Design & UX
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop
+- **Mobile Navigation**: Hamburger menu with smooth animations
+- **Modern Gradients**: Beautiful gradient backgrounds and hover effects
+- **Dark/Light Themes**: Professional color schemes throughout
+- **Smooth Animations**: Hover effects, transitions, and micro-interactions
+
+### 📱 Mobile Optimization
+- **Hamburger Menu**: Collapsible navigation for mobile devices
+- **Responsive Grids**: Cards and content stack appropriately on small screens
+- **Mobile-First Layouts**: Optimized spacing and typography for mobile
+- **Touch-Friendly**: Large buttons and touch targets
+
+### 🖼️ Content Management
+- **Project Gallery**: Image previews with modal lightbox functionality
+- **CDN Integration**: Fast image loading from FrontEndOnFront CDN
+- **Dynamic Content**: TypeScript-powered data management
+- **SEO Optimized**: Proper meta tags and semantic HTML
+
+### 🔧 Technical Features
+- **Static Site Generation**: Pre-rendered pages for optimal performance
+- **ESLint Integration**: Code quality enforcement
+- **Type Safety**: Full TypeScript implementation
+- **Performance Optimized**: Lighthouse score optimizations
+
+## 🗂️ Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout with theme provider
+│   ├── page.tsx            # Main portfolio page
+│   └── globals.css         # Global styles and CSS variables
+├── components/
+│   ├── portfolio/
+│   │   ├── about-section.tsx       # About me section
+│   │   ├── hero-section.tsx        # Landing hero section
+│   │   ├── navigation.tsx          # Mobile-responsive navbar
+│   │   ├── projects-section.tsx    # Project showcase
+│   │   └── image-preview-modal.tsx # Image lightbox modal
+│   └── ui/                 # Reusable UI components
+└── lib/
+    └── data/
+        └── projects.ts     # Project and experience data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Garciat427/Garciat427.github.io.git
+   cd Garciat427.github.io
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Open in browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Deploy on Vercel
+### Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint code quality checks
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📊 Performance
+
+- **Build Size**: ~138kB First Load JS
+- **Static Generation**: All pages pre-rendered
+- **Image Optimization**: Next.js Image component with CDN
+- **Mobile Performance**: Optimized for mobile-first experience
+
+## 🌟 Key Sections
+
+### 🏠 Hero Section
+- Professional introduction
+- Key statistics and achievements
+- Call-to-action buttons
+
+### 👨‍💻 Work Experience
+- Timeline-based layout with company icons
+- Mobile-optimized card design
+- Detailed role descriptions and tech stacks
+
+### 💼 Projects
+- Current projects (in development)
+- Personal projects portfolio
+- Work projects showcase
+- Modal details with image galleries
+
+### 🚀 FrontEndOnFront Consulting
+- Business overview since 2019
+- Service highlights and statistics
+- Client testimonials and achievements
+
+## 🔗 Links
+
+- **Portfolio**: [garciat427.github.io](https://garciat427.github.io)
+- **LinkedIn**: [linkedin.com/in/garciat427](https://linkedin.com/in/garciat427)
+- **Consulting**: [frontendonfront.com](https://frontendonfront.com)
+- **Resume**: [Online Resume PDF](https://cdn.frontendonfront.com/TroyGarcia-Resume-Online.pdf)
+
+## 📞 Contact
+
+For collaboration opportunities or consulting inquiries:
+
+- **Email**: Through contact form on portfolio
+- **LinkedIn**: [garciat427](https://linkedin.com/in/garciat427)
+- **Consulting**: [FrontEndOnFront](https://frontendonfront.com)
+
+## 📝 License
+
+This project is personal portfolio property of Troy Garcia. All rights reserved.
+
+---
+
+**Built with ❤️ by Troy Garcia** | **Powered by Next.js & Tailwind CSS**
