@@ -255,7 +255,7 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               <div className="flex items-center justify-center gap-2 text-green-400">
                 <span>✓</span>
                 <span className="text-sm">Free consultation</span>
@@ -275,7 +275,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">50+</div>
               <p className="text-gray-300 text-sm">Satisfied Clients</p>
