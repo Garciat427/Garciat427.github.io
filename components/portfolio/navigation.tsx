@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
@@ -10,6 +10,18 @@ interface NavigationProps {
 
 export function Navigation({ scrollToSection }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  // Close mobile menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+    
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [isMobileMenuOpen])
 
   const handleMobileNavClick = (sectionId: string) => {
     scrollToSection(sectionId)
@@ -31,30 +43,35 @@ export function Navigation({ scrollToSection }: NavigationProps) {
           <button
             onClick={() => scrollToSection("about")}
             className="text-gray-600 hover:text-emerald-600 transition-colors"
+            aria-label="Navigate to About section"
           >
             About
           </button>
           <button
             onClick={() => scrollToSection("projects")}
             className="text-gray-600 hover:text-emerald-600 transition-colors"
+            aria-label="Navigate to Projects section"
           >
             Projects
           </button>
           <button
             onClick={() => scrollToSection("experience")}
             className="text-gray-600 hover:text-emerald-600 transition-colors"
+            aria-label="Navigate to Experience section"
           >
             Experience
           </button>
           <button
             onClick={() => scrollToSection("consulting")}
             className="text-gray-600 hover:text-emerald-600 transition-colors"
+            aria-label="Navigate to Consulting section"
           >
             Consulting
           </button>
           <button
             onClick={() => scrollToSection("contact")}
             className="text-gray-600 hover:text-emerald-600 transition-colors"
+            aria-label="Navigate to Contact section"
           >
             Contact
           </button>
@@ -66,6 +83,9 @@ export function Navigation({ scrollToSection }: NavigationProps) {
           size="sm"
           className="md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
         >
           {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
@@ -73,35 +93,45 @@ export function Navigation({ scrollToSection }: NavigationProps) {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-paper-light/95 backdrop-blur-md border-b border-gray-200 animate-in slide-in-from-top-2 duration-200">
-          <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
+        <div id="mobile-navigation" className="md:hidden bg-paper-light/95 backdrop-blur-md border-b border-gray-200 animate-in slide-in-from-top-2 duration-200">
+          <div className="container mx-auto px-6 py-4 flex flex-col gap-4" role="menu">
             <button
               onClick={() => handleMobileNavClick("about")}
               className="text-gray-600 hover:text-emerald-600 transition-colors text-left py-2"
+              role="menuitem"
+              aria-label="Navigate to About section"
             >
               About
             </button>
             <button
               onClick={() => handleMobileNavClick("projects")}
               className="text-gray-600 hover:text-emerald-600 transition-colors text-left py-2"
+              role="menuitem"
+              aria-label="Navigate to Projects section"
             >
               Projects
             </button>
             <button
               onClick={() => handleMobileNavClick("experience")}
               className="text-gray-600 hover:text-emerald-600 transition-colors text-left py-2"
+              role="menuitem"
+              aria-label="Navigate to Experience section"
             >
               Experience
             </button>
             <button
               onClick={() => handleMobileNavClick("consulting")}
               className="text-gray-600 hover:text-emerald-600 transition-colors text-left py-2"
+              role="menuitem"
+              aria-label="Navigate to Consulting section"
             >
               Consulting
             </button>
             <button
               onClick={() => handleMobileNavClick("contact")}
               className="text-gray-600 hover:text-emerald-600 transition-colors text-left py-2"
+              role="menuitem"
+              aria-label="Navigate to Contact section"
             >
               Contact
             </button>

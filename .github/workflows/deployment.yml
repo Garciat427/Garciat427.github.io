@@ -1,42 +1,49 @@
-name: Deployment Status
+name: Netlify Deployment Status
 
 on:
   push:
     branches: [ main, portfolio_v2 ]
 
 jobs:
-  portfolio-health-check:
-    name: Portfolio Deployment Health Check
+  netlify-deployment-check:
+    name: Netlify Portfolio Health Check
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/portfolio_v2' || github.ref == 'refs/heads/main'
     
     steps:
+      - name: Wait for Netlify deployment
+        run: |
+          echo "⏳ Waiting for Netlify deployment to complete..."
+          echo "ℹ️ Netlify automatically deploys from GitHub when changes are pushed"
+          sleep 60  # Give Netlify time to deploy
+          
       - name: Check Portfolio App Status
         run: |
-          echo "Checking portfolio deployment health..."
+          echo "Checking Netlify portfolio deployment health..."
           curl -sSf https://portfolio.frontendonfront.com/ > /dev/null
-          echo "✅ Portfolio app is responding successfully"
+          echo "✅ Portfolio app is responding successfully on Netlify"
           
       - name: Performance Check
         run: |
-          echo "Running basic performance check..."
+          echo "Running basic performance check on Netlify deployment..."
           response_time=$(curl -o /dev/null -s -w '%{time_total}' https://portfolio.frontendonfront.com/)
           echo "Response time: ${response_time}s"
-          if (( $(echo "$response_time < 3.0" | bc -l) )); then
-            echo "✅ Performance check passed (< 3s)"
+          if (( $(echo "$response_time < 2.0" | bc -l) )); then
+            echo "✅ Performance check passed (< 2s) - Netlify CDN performing well"
           else
-            echo "⚠️ Performance check warning (> 3s)"
+            echo "⚠️ Performance check warning (> 2s) - Check Netlify deployment"
           fi
 
   notify-success:
-    name: Deployment Success Notification
+    name: Netlify Deployment Success
     runs-on: ubuntu-latest
-    needs: portfolio-health-check
+    needs: netlify-deployment-check
     if: success()
     
     steps:
       - name: Success notification
         run: |
-          echo "🎉 Portfolio deployment verified successfully!"
+          echo "🎉 Portfolio deployment verified successfully on Netlify!"
           echo "🌐 Live at: https://portfolio.frontendonfront.com/"
-          echo "📊 All health checks passed" 
+          echo "📊 All health checks passed"
+          echo "⚡ Powered by Netlify CDN for optimal performance" 
