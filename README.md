@@ -1,30 +1,36 @@
-<h1 align="center">
-  My Portfolio Page - Version 1.0
-</h1>
-<p align="center">
-  Welcome to my portfolio! This is version 1.0 of <a href="https://garciat427.netlify.com/" target="_blank">https://garciat427.netlify.com/</a> built using <a href="https://materializecss.com/" target="_blank">Materalize</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
-</p>
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-<p align="center">
-  
-  <a href="https://app.netlify.com/sites/garciat427/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/17923dc8-a89c-4305-afe2-a1acaadee1ce/deploy-status" alt="Netlify Status" />
-  </a>
-</p>
+## Getting Started
 
-![demo](https://i.gyazo.com/73f8d4548a375fe93ffb9d9fb6d10ed8.png)
+First, run the development server:
 
-## 🎨 Color Reference
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-| Color          | Hex                                                                |
-| -------------- | ------------------------------------------------------------------ |
-| Blue-Grey      | ![#263238](https://via.placeholder.com/10/263238?text=+) `#263238` |
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🔗 External Links and Refrences Used in this Project
-[FrontEndOnFront Website](https://frontendonfront.com/)  
-[LinkedIn](www.linkedin.com/in/garciat427)  
-[GitHub](https://github.com/Garciat427/)  
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This website was developed using the Materalize Framework and Animate-On-Scroll Library  
-[MateralizeCSS Website](https://materializecss.com/)  
-[AOS Website](https://michalsnik.github.io/aos/)  
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
