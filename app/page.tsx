@@ -79,46 +79,116 @@ export default function Portfolio() {
           </div>
 
           <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-400 via-green-400 to-teal-400"></div>
+            {/* Timeline line - hidden on mobile */}
+            <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-400 via-green-400 to-teal-400"></div>
 
-            <div className="space-y-12">
+            <div className="space-y-12 md:space-y-12">
               {workExperience.map((job, index) => (
-                <div key={index} className="relative flex items-start gap-8">
-                  <div className="relative z-10 flex-shrink-0">
-                    <div
-                      className={`w-16 h-16 rounded-full ${job.color} flex items-center justify-center text-2xl shadow-lg border-4 border-white`}
-                    >
-                      {job.icon}
-                    </div>
-                    {job.current && (
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center">
-                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <div key={index} className="relative">
+                  {/* Desktop layout */}
+                  <div className="hidden md:flex md:items-start md:gap-8">
+                    <div className="relative z-10 flex-shrink-0">
+                      <div
+                        className={`w-16 h-16 rounded-full ${job.color} flex items-center justify-center text-2xl shadow-lg border-4 border-white`}
+                      >
+                        {job.icon}
                       </div>
-                    )}
+                      {job.current && (
+                        <div className="absolute -top-1 -right-1 w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                        </div>
+                      )}
+                    </div>
+
+                    <Card
+                      className={`flex-1 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 ${job.borderColor} bg-white/90 backdrop-blur-sm`}
+                    >
+                      <div className="p-6">
+                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-1">{job.title}</h3>
+                            <p className="text-lg font-semibold text-emerald-700">{job.company}</p>
+                            <p className="text-sm text-gray-500">{job.location}</p>
+                          </div>
+                          <Badge
+                            variant="outline"
+                            className={`${job.borderColor} ${job.current ? "bg-emerald-50 text-emerald-700 border-emerald-200" : "bg-gray-50 text-gray-700"} whitespace-nowrap`}
+                          >
+                            {job.period}
+                          </Badge>
+                        </div>
+
+                        <p className="text-gray-600 mb-4 leading-relaxed">{job.description}</p>
+
+                        <div className="mb-4">
+                          <h4 className="font-semibold text-gray-900 mb-2">Key Responsibilities:</h4>
+                          <ul className="space-y-1">
+                            {job.responsibilities.map((responsibility, idx) => (
+                              <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                                <span className="text-emerald-500 mt-1.5 flex-shrink-0">•</span>
+                                <span>{responsibility}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h4 className="font-semibold text-gray-900 mb-2 text-sm">Tech Stack:</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {job.techStack.map((tech) => (
+                              <Badge
+                                key={tech}
+                                variant="secondary"
+                                className="text-xs bg-emerald-50 text-emerald-700 border border-emerald-200"
+                              >
+                                {tech}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </Card>
                   </div>
 
+                  {/* Mobile layout */}
                   <Card
-                    className={`flex-1 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 ${job.borderColor} bg-white/90 backdrop-blur-sm`}
+                    className={`md:hidden hover:shadow-xl transition-all duration-300 border-2 ${job.borderColor} bg-white/90 backdrop-blur-sm relative`}
                   >
-                    <div className="p-6">
-                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-900 mb-1">{job.title}</h3>
-                          <p className="text-lg font-semibold text-emerald-700">{job.company}</p>
-                          <p className="text-sm text-gray-500">{job.location}</p>
+                    {/* Top-left icon */}
+                    <div className="absolute -top-3 -left-3 z-10">
+                      <div
+                        className={`w-12 h-12 rounded-full ${job.color} flex items-center justify-center text-lg shadow-lg border-3 border-white`}
+                      >
+                        {job.icon}
+                      </div>
+                      {job.current && (
+                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full flex items-center justify-center">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
                         </div>
-                        <Badge
-                          variant="outline"
-                          className={`${job.borderColor} ${job.current ? "bg-emerald-50 text-emerald-700 border-emerald-200" : "bg-gray-50 text-gray-700"} whitespace-nowrap`}
-                        >
-                          {job.period}
-                        </Badge>
+                      )}
+                    </div>
+                    
+                    <div className="p-6 pt-8">
+                      <div className="flex flex-col gap-2 mb-4">
+                        <div className="flex items-start justify-between gap-2">
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold text-gray-900 mb-1">{job.title}</h3>
+                            <p className="text-base font-semibold text-emerald-700">{job.company}</p>
+                            <p className="text-sm text-gray-500">{job.location}</p>
+                          </div>
+                          <Badge
+                            variant="outline"
+                            className={`${job.borderColor} ${job.current ? "bg-emerald-50 text-emerald-700 border-emerald-200" : "bg-gray-50 text-gray-700"} whitespace-nowrap text-xs`}
+                          >
+                            {job.period}
+                          </Badge>
+                        </div>
                       </div>
 
-                      <p className="text-gray-600 mb-4 leading-relaxed">{job.description}</p>
+                      <p className="text-gray-600 mb-4 leading-relaxed text-sm">{job.description}</p>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Responsibilities:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Responsibilities:</h4>
                         <ul className="space-y-1">
                           {job.responsibilities.map((responsibility, idx) => (
                             <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
