@@ -375,7 +375,7 @@ export default function Portfolio() {
               className="bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-700 hover:to-green-800 text-white px-16 py-6 text-xl font-semibold w-full sm:w-auto group transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-w-[280px]"
               asChild
             >
-              <a href="https://cdn.frontendonfront.com/TroyGarcia-Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="https://cdn.frontendonfront.com/TroyGarcia-Resume-Online.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                 Download Resume
               </a>
