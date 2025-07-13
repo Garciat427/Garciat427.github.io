@@ -101,7 +101,7 @@ export function AboutSection() {
                 <Zap className="h-5 w-5 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
                 Core Strengths
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 hover:bg-blue-50 p-2 rounded-lg transition-colors duration-200">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                   <span className="text-sm text-gray-700">Fast-Paced Learner</span>

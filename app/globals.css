@@ -55,6 +55,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Prevent navbar shifting when modal opens by maintaining scrollbar space */
+    scrollbar-gutter: stable;
   }
 }
 

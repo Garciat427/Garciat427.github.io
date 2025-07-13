@@ -143,7 +143,7 @@ export function ProjectsSection({ openImagePreview }: ProjectsSectionProps) {
                     ))}
                   </ul>
                 </div>
-                <div className="flex gap-2 pt-4">
+                <div className="flex flex-col sm:flex-row gap-2 pt-4">
                   {project.github && (
                     <Button variant="outline" size="sm" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
