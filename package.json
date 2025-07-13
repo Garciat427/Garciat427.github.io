@@ -4,11 +4,16 @@
   "private": true,
   "description": "Professional portfolio website for Troy Garcia - Full Stack Developer",
   "author": "Troy Garcia",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
