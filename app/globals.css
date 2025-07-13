@@ -90,16 +90,3 @@
 .texture-overlay {
   position: relative;
 }
-
-.texture-overlay::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("/grid-texture.png");
-  background-size: 100px 100px;
-  opacity: 0.03;
-  pointer-events: none;
-}

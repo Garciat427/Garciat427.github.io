@@ -418,7 +418,7 @@ export default function Portfolio() {
             <div className="flex flex-col items-center mb-8">
               <div className="mb-4">
                 <Image
-                  src="/frontendonfront-logo.png"
+                  src="/logo.svg"
                   alt="FrontEndonFront Logo"
                   width={80}
                   height={80}
@@ -528,6 +528,13 @@ export default function Portfolio() {
             <div className="flex justify-center">
               <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
                 <a href="https://frontendonfront.com" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/logo.svg"
+                    alt="FrontEndonFront Logo"
+                    width={20}
+                    height={20}
+                    className="mr-2"
+                  />
                   Visit FrontEndonFront
                   <ExternalLink className="ml-2 h-5 w-5" />
                 </a>
@@ -551,42 +558,34 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-6 justify-center items-center max-w-2xl mx-auto">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-4xl mx-auto">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-700 hover:to-green-800 text-white px-8 py-4 text-lg group transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-700 hover:to-green-800 text-white px-16 py-6 text-xl font-semibold w-full sm:w-auto group transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-w-[280px]"
+              asChild
             >
-              <Download className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-              Download Resume
+              <a href="https://cdn.frontendonfront.com/TroyGarcia-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Download className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+                Download Resume
+              </a>
             </Button>
 
-            <div className="flex flex-col sm:flex-row gap-6 w-full">
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg w-full group transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                asChild
+            <Button
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-16 py-6 text-xl font-semibold w-full sm:w-auto group transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl min-w-[280px]"
+              asChild
+            >
+              <a
+                href="https://www.linkedin.com/in/troy-garcia-software-developer/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a
-                  href="https://www.linkedin.com/in/troy-garcia-software-developer/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Linkedin className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                  View LinkedIn Profile
-                </a>
-              </Button>
+                <Linkedin className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+                View LinkedIn Profile
+              </a>
+            </Button>
 
-              <Button
-                size="lg"
-                className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 text-lg w-full group transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                asChild
-              >
-                <a href="https://www.frontendonfront.com/" target="_blank" rel="noopener noreferrer">
-                  <Globe className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                  Explore FrontEndonFront
-                </a>
-              </Button>
-            </div>
+
           </div>
         </div>
       </section>
