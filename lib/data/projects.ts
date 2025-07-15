@@ -97,20 +97,21 @@ export interface Project {
 export const currentProjects: Project[] = [
   {
     id: 2,
-    title: "MCP AI Security Platform",
+    title: "Confidential Data Access Platform using MCP & RAG",
     year: "WIP – 2025",
-    description: "A secure interface that connects proprietary business systems to AI models using Anthropic's Model Context Protocol (MCP).",
+    description: "A secure interface that connects proprietary business systems to AI models using Anthropic's Model Context Protocol (MCP) and Retrieval-Augmented Generation (RAG).",
     fullDescription:
-      "MCP AI Security Platform is a secure interface that connects proprietary business systems to AI models using Anthropic's Model Context Protocol (MCP). It demonstrates how to safely enable AI assistants to access databases, APIs, and internal files while maintaining strict privacy controls and enterprise-grade security.",
-    stack: ["React", "Node.js", "TypeScript", "MCP Protocol", "OpenAI API", "JWT Authentication", "Encryption Standards"],
+      "Confidential Data Access Platform is a secure interface that connects proprietary business systems to AI models using Anthropic's Model Context Protocol (MCP) and Retrieval-Augmented Generation (RAG). This project demonstrates how enterprise data can be accessed and processed by AI assistants without compromising security, using RAG to fetch real-time context and MCP to enforce strict data controls.",
+    stack: ["React", "Node.js", "TypeScript", "MCP Protocol", "OpenAI API", "RAG Pattern (Vector Search)", "JWT Authentication", "Encryption Standards"],
     features: [
       "Secure LLM-to-database/API communication using MCP",
-      "Role-based access controls with JWT authentication", 
+      "Context injection using RAG from vector-based document stores",
+      "Role-based access control with JWT authentication",
       "Real-time data filtering and sanitization",
       "Encrypted data transmission",
-      "Audit logging and request tracking",
-      "Multi-tenant security model",
-      "API rate limiting and abuse prevention"
+      "Audit logging and access tracking",
+      "Multi-tenant architecture with scoped permissions",
+      "API rate limiting and abuse protection"
     ],
     images: [],
     github: null,

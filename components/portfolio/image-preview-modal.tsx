@@ -49,7 +49,34 @@ export function ImagePreviewModal({ isOpen, images, currentIndex, onClose, onNex
             width={800}
             height={600}
             className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+            priority={true}
           />
+          
+          {/* Preload next and previous images for better UX */}
+          {images.length > 1 && (
+            <>
+              {currentIndex < images.length - 1 && (
+                <Image
+                  src={images[currentIndex + 1]}
+                  alt="Next image preload"
+                  width={800}
+                  height={600}
+                  className="hidden"
+                  loading="eager"
+                />
+              )}
+              {currentIndex > 0 && (
+                <Image
+                  src={images[currentIndex - 1]}
+                  alt="Previous image preload"
+                  width={800}
+                  height={600}
+                  className="hidden"
+                  loading="eager"
+                />
+              )}
+            </>
+          )}
         </div>
 
         {images.length > 1 && (

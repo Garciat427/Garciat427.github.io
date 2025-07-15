@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -17,6 +17,81 @@ import Image from "next/image"
 
 interface ProjectsSectionProps {
   openImagePreview: (images: string[], startIndex?: number) => void
+}
+
+// Lazy loading image component
+const LazyImage = ({
+  src,
+  alt,
+  width,
+  height,
+  className,
+  onClick,
+  children,
+}: {
+  src: string
+  alt: string
+  width: number
+  height: number
+  className?: string
+  onClick?: () => void
+  children?: React.ReactNode
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(false)
+  const imgRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div ref={imgRef} className={`relative ${className}`} onClick={onClick}>
+      {isInView ? (
+        <>
+          {!isLoaded && (
+            <div className="absolute inset-0 bg-gray-100 animate-pulse rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 border-2 border-gray-300 border-t-emerald-500 rounded-full animate-spin"></div>
+            </div>
+          )}
+          <Image
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            className={`w-full rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 group-hover:scale-[1.02] ${
+              isLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            onLoad={() => setIsLoaded(true)}
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+            quality={85}
+          />
+          {children}
+        </>
+      ) : (
+        <div className="w-full h-[300px] bg-gray-100 rounded-lg flex items-center justify-center">
+          <div className="text-gray-400 text-sm">Loading...</div>
+        </div>
+      )}
+    </div>
+  )
 }
 
 export function ProjectsSection({ openImagePreview }: ProjectsSectionProps) {
@@ -102,22 +177,19 @@ export function ProjectsSection({ openImagePreview }: ProjectsSectionProps) {
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {project.images.map((image, index) => (
-                      <div
+                      <LazyImage
                         key={index}
-                        className="relative group cursor-pointer"
+                        src={image || "/placeholder.svg"}
+                        alt={`${project.title} Screenshot ${index + 1}`}
+                        width={400}
+                        height={300}
+                        className="group cursor-pointer"
                         onClick={() => openImagePreview(project.images, index)}
                       >
-                        <Image
-                          src={image || "/placeholder.svg"}
-                          alt={`${project.title} Screenshot ${index + 1}`}
-                          width={400}
-                          height={300}
-                          className="w-full rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 group-hover:scale-[1.02]"
-                        />
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-200 rounded-lg flex items-center justify-center">
                           <ZoomIn className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                         </div>
-                      </div>
+                      </LazyImage>
                     ))}
                   </div>
                   <p className="text-sm text-gray-500 mt-2">Click images to view in full size</p>
