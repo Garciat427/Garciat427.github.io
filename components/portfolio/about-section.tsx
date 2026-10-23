@@ -127,9 +127,10 @@ export function AboutSection() {
                 Leadership & Mentorship
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                I believe in lifting others as I climb. Throughout my career, I&apos;ve mentored junior developers, sharing
-                knowledge and fostering growth within development teams. My collaborative approach and ability to
-                break down complex concepts has helped numerous developers accelerate their learning journey.
+                I believe in lifting others as I climb. I&apos;ve mentored junior developers and led code reviews on
+                development teams, served as a Teaching Assistant for the University of Central Florida&apos;s Full Stack
+                Web Development Bootcamp, and have served as a Demo Day Tech Mentor. Breaking down complex concepts has
+                helped numerous developers accelerate their learning journey.
               </p>
             </Card>
           </div>
@@ -241,13 +242,15 @@ export function AboutSection() {
           <Card className="p-8 border-0 shadow-lg bg-gradient-to-r from-gray-900 to-gray-800 text-white">
             <h3 className="text-2xl font-bold mb-4">Current Focus</h3>
             <p className="text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
-              Today, I&apos;m focused on pushing the boundaries of web development through AI integration, security-first
-              development practices, and building scalable solutions that make a real impact. Whether working with
+              Today, I&apos;m a Senior Full Stack Developer at TRAXSupport, building headless eCommerce storefronts,
+              fulfillment workflows, and inventory systems, while pushing the boundaries of web development through AI
+              integration and security-first practices. Whether working with
               startups or established companies, I bring the same passion for innovation and commitment to excellence
               that has driven my journey from day one.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Badge className="bg-emerald-600 text-white px-4 py-2">MERN Stack</Badge>
+              <Badge className="bg-teal-600 text-white px-4 py-2">Headless eCommerce</Badge>
               <Badge className="bg-blue-600 text-white px-4 py-2">AI Development</Badge>
               <Badge className="bg-purple-600 text-white px-4 py-2">Security</Badge>
               <Badge className="bg-orange-600 text-white px-4 py-2">Mentorship</Badge>
