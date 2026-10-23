@@ -7,18 +7,27 @@ interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void
 }
 
+// Professional experience counts from when Front End on Front started (Sep 2019)
+const CAREER_START = new Date(2019, 8, 1)
+
+function yearsSince(start: Date) {
+  const now = new Date()
+  const years = now.getFullYear() - start.getFullYear()
+  return now.getMonth() < start.getMonth() ? years - 1 : years
+}
+
 export function HeroSection({ scrollToSection }: HeroSectionProps) {
   const stats = [
     {
-      number: "5+",
+      number: `${yearsSince(CAREER_START)}+`,
       label: "Years Experience",
       color: "text-emerald-600",
       icon: <Award className="h-8 w-8 md:h-10 md:w-10" />,
       iconColor: "text-emerald-600",
     },
     {
-      number: "15+",
-      label: "Projects Completed",
+      number: "50+",
+      label: "Projects Delivered",
       color: "text-green-600",
       icon: <Clipboard className="h-8 w-8 md:h-10 md:w-10" />,
       iconColor: "text-green-600",
@@ -71,6 +80,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
                   {stat.icon}
                 </div>
                 <span
+                  suppressHydrationWarning
                   className={`text-3xl md:text-4xl lg:text-5xl font-bold ${stat.color} transition-all duration-300 group-hover:scale-105`}
                 >
                   {stat.number}
