@@ -242,8 +242,9 @@ export function AboutSection() {
           <Card className="p-8 border-0 shadow-lg bg-gradient-to-r from-gray-900 to-gray-800 text-white">
             <h3 className="text-2xl font-bold mb-4">Current Focus</h3>
             <p className="text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
-              Today, I&apos;m a Senior Full Stack Developer at TRAXSupport, building headless eCommerce storefronts,
-              fulfillment workflows, and inventory systems, while pushing the boundaries of web development through AI
+              Today, I&apos;m a Senior Full Stack Developer at TRAXSupport, where I own the technology behind a
+              multi-brand eCommerce operation: client Shopify storefronts, the order and inventory pipeline that connects
+              them to three warehouses, and the company&apos;s IT and phone systems, while pushing the boundaries of web development through AI
               integration and security-first practices. Whether working with
               startups or established companies, I bring the same passion for innovation and commitment to excellence
               that has driven my journey from day one.
