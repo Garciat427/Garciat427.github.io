@@ -66,8 +66,8 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Welcome to My Portfolio</h2>
 
         <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Full-stack software engineer specializing in MERN stack development, AI integration, and building scalable web
-          applications that drive business growth.
+          Senior full-stack engineer specializing in MERN stack development, headless eCommerce, AI integration, and
+          building scalable web applications that drive business growth.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16 lg:gap-20 mb-12 max-w-7xl mx-auto">
